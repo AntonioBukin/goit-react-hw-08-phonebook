@@ -1,0 +1,48 @@
+.contacts__item {
+  display: flex;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.contacts__data {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+}
+
+.contacts li p span {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.btnDel {
+  background-color: #29caea;
+  border-radius: 100px;
+  color: rgb(5, 26, 251);
+  cursor: pointer;
+  //display: flex;
+  //align-items: center;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 5px 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnDel:hover {
+  box-shadow: rgb(255, 255, 255) -2px -2px 5px, rgb(139, 167, 147) 2px 2px 5px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.icon {
+  margin-left: 5px;
+}
