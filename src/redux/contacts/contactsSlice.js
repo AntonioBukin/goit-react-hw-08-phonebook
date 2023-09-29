@@ -1,5 +1,6 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from './operations';
+import { logOut } from 'redux/auth/operations';
 
 const contactsSlice = createSlice({
   name: 'contacts',
@@ -7,8 +8,15 @@ const contactsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    showModal: false,
+    // deleteId: 0,
   },
-
+  reducers: {
+    toggleModal: (state, action) => {
+      state.showModal = !state.showModal;
+      state.deleteId = action.payload;
+    },
+  },
   extraReducers: builder => {
     builder
       .addCase(fetchContacts.fulfilled, (state, action) => {
@@ -28,6 +36,11 @@ const contactsSlice = createSlice({
           item => item.id === action.payload.id
         );
         state.items.splice(index, 1);
+      })
+      .addCase(logOut.fulfilled, state => {
+        state.items = [];
+        state.isLoading = false;
+        state.error = null;
       })
       .addMatcher(
         isAnyOf(
@@ -53,3 +66,5 @@ const contactsSlice = createSlice({
 });
 
 export const contactsReducer = contactsSlice.reducer;
+
+export const { toggleModal } = contactsSlice.actions;

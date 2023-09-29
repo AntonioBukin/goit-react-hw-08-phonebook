@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { TiUserDeleteOutline } from 'react-icons/ti';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/auth/operations';
 import css from './my-contact-item.module.scss';
 
 export const ContactItem = ({ id, name, phone }) => {
