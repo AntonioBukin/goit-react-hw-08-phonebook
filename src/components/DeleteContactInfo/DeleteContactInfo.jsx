@@ -10,7 +10,7 @@ import {
   Text,
 } from './DeleteContactInfo.styled';
 
-export const DeleteContactWarning = ({ id }) => {
+export const DeleteContactInfo = ({ id }) => {
   const dispatch = useDispatch();
 
   const handleDeleteContact = () => {
