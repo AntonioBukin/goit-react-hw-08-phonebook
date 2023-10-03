@@ -7,7 +7,7 @@ import {
   selectIsLoading,
   selectShowModal,
 } from 'redux/contacts/selectors';
-import ContactForm from 'components/ContactForm/ContactForm';
+import ContactForm from 'components/MyContactForm/MyContactForm.jsx';
 import Filter from 'components/Filter/Filter';
 import ContactList from 'components/MyContactList/MyContactList.jsx';
 import { Modal } from 'components/Modal/Modal.jsx';
