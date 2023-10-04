@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Avatar, Badge, Chip } from '@mui/material';
 import { logOut } from 'redux/auth/operations';
 import { Wrapper } from './UserMenu.styled';
+import { keyframes } from '@emotion/react';
 
 const pulseAnimation = keyframes`
   0% {

@@ -16,7 +16,7 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <div>Что-то пошло не так. Пожалуйста, обновите страницу.</div>;
+      return <div>We have a problem</div>;
     }
 
     return this.props.children;
